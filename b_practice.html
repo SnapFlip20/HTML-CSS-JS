@@ -1,0 +1,103 @@
+<!--
+    form과 input 태그를 연습하고 활용하는 공간
+-->
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>b_practice</title>
+</head>
+<body>
+    <h1>⭐️ 회 원 가 입 ⭐️</h1>
+    <h3> 영어로는 Sign Up </h3>
+    <p>회원가입 양식 형태만 대충 따라한 것이기 때문에<br>입력/선택 외의 추가적인 기능은 없음 ㅎㅎ</p>
+
+    <form>
+        <fieldset>
+            <legend>개인 정보 입력</legend>
+            <label>
+                타입: <input type="text" id="user_type" size="7" value="인간" readonly>
+            </label><br>
+            <label>
+                이름: <input type="text" id="user_real_name" size="10" autofocus="required" required>
+            </label><br>
+            <label>
+                별명: <input type="text" id="user_nick_name" size="10">
+            </label><hr>
+            <label>
+                아이디(최대 15자): <input type="text" id="user_id" size="15" maxlength="15" required>
+                <input type="button" value="중복 확인" onclick="alert('사용할 수 있는 아이디일까요?')">
+            </label><br>
+            <label>
+                비밀번호: <input type="password" id="user_pw" size="20" maxlength="15" placeholder="영문/숫자 혼합 최대 15자" required>
+            </label><br>
+            <label>
+                비밀번호 확인: <input type="password" id="user_pw_check" size="20" maxlength="15" required>
+            </label><br>
+            <label>
+                이메일: <input type="email" size="12">@<input type="email" size="12">
+            </label><br>
+            <label>
+                전화번호: <input type="tel" size="3" maxlength="3">-<input type="tel" size="3" maxlength="4">-<input type="tel" size="3" maxlength="4">
+                <input type="button" value="인증번호 발송" onclick="alert('인증번호가 발송되지 않았습니다.')"><br>
+                인증번호: <input type="text" id="check" size="10" placeholder="6자리 숫자 입력">
+            </label><hr>
+            <label>
+                생년월일: <input type="date">
+            </label><br>
+            <label>
+                성별: 
+                <input type="radio" name="gender">여성 
+                <input type="radio" name="gender">남성 
+                <input type="radio" name="gender">기타
+                <input type="radio" name="gender">비공개
+            </label><hr>
+            <label>
+                <input type="checkbox"> 만 14세 이상입니다<br>
+                <input type="checkbox"> 개인정보 수집 및 이용 동의 
+                <input type="button" value="내용 확인" onclick="alert('당신의 모든 개인정보는 이제부터 저의 것입니다 희희')"><br>
+                <input type="checkbox"> 이벤트/마케팅 알림 수신 동의 
+                <input type="button" value="내용 확인" onclick="alert('이런 거 체크하면 나중에 알림 엄청 오더라구요 조심하셈')">
+            </label><hr>
+            <label>
+                <p>입력된 정보 저장</p>
+                <input type="radio" name="info_save" checked>정보 저장
+                <input type="radio" name="info_save">정보 저장 안 함
+            </label><hr>
+        </fieldset>
+    </form>
+    <br>
+    <form>
+        <fieldset>
+            <legend>추가 정보 입력</legend>
+            <label>
+                개인 사이트: <input type="url" size="30">
+            </label><br>
+            <label>
+                자격증 등록: <label><input type="file"></label>
+            </label><br>
+            <label>
+                IQ: <input type="number" min="0" max="4294967296" step="1" value="100">
+            </label><hr>
+            <label>
+                이 사이트에 가입한 이유:
+                <select id="why">
+                    <option value="o1">심심해서</option>
+                    <option value="o2">재미있어보여서</option>
+                    <option value="o3">세상이 둥근 이유를 알고 싶어서</option>
+                    <option value="o4">리만 제타 함수 ζ(s)=0을 만족하는 모든 자명하지 않은 근의 실수부는 1/2임을 증명하기 위해서</option>
+                    <option value="o5">기타</option>
+                </select>
+            </label><br>
+            <label>
+                제작자에게 하고 싶은 말:<br>
+                <textarea cols="50" rows="5" placeholder="여기에 내용 입력"></textarea>
+            </label><hr>
+        </fieldset>
+    </form>
+    <br>
+    <label><input type="submit" value="가입하기" onclick="window.open('b2.html')"></label>
+    <label><input type="reset" value="돌아가기" onclick="window.open('images/jtk1.gif')"></label><br>
+</body>
+</html>
