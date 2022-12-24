@@ -1,0 +1,46 @@
+<!--
+    스타일과 스타일 시트
+-->
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        #container {
+            width: 400px; /* 너비 */
+            margin: 20px auto; /* 중앙 배치*/
+            padding: 10px; /* 테두리와 내용 사이 여백 */
+            border: 5px solid greenyellow; /* 테두리 굵기와 색깔 */
+        }
+        p {
+            font-style: normal;
+            font-size: larger;
+        }
+        .accent {
+            border: 2px solid #000;
+            padding: 5px;
+        }
+        .accent2 {
+            border: 7px solid #000;
+            padding: 10px;
+            font-size:100px;
+        }
+        .bg {
+            background-color: gray;
+        }
+    </style>
+</head>
+<body>
+    <img src="images/cat.jpg" width="40%" alt="뭘 봐">
+    <br>
+    <h1 class="accent bg">환상의 CSS 세계</h1>
+    <div id="container">
+        <p>이제부터 CSS를 활용하여</p>
+        <p>웹사이트를 예쁘게 꾸며봅시다</p> 
+        <p><span class="accent2">쨘</span></p>
+        <p>신기하죠??</p>
+    </div>
+</body>
+</html>
