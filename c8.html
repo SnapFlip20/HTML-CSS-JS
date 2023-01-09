@@ -1,0 +1,104 @@
+<!--
+    Transform, Transition 적용하기
+-->
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body {background-color:dimgrey;}
+        .time1s > div {
+            transition: all 1s;
+        }
+        #margin1 {
+            width: 800px;
+            margin: 10px auto;
+            padding: 10px;
+            text-align: center;
+        }
+        
+        /* 3차원 회전 */
+        #rotate_x_180:hover {transform: rotateX(180deg);}
+        #rotate_y_180:hover {transform: rotateY(180deg);}
+        #rotate_z_180:hover {transform: rotateZ(180deg);}
+        #rotate_xyz:hover {transform: rotate3d(1, -1, 1, 360deg);}
+
+        /* 비틀기 */
+        #skew_x:hover {transform: skewX(180deg);}
+        #pers {perspective: 300px;}
+        h3 {
+            height: 50px;
+            background-color:gold;
+            color:orangered;
+            font-size: larger;
+            line-height: 50px;
+            text-align: center;
+            transform: skew(25deg, 10deg);
+        }
+
+        /* 트랜지션 */
+        .box {
+            margin: 50px auto;
+            width: 100px;
+            height: 100px;
+            background-color: black;
+            color: white;
+            transition: 1618ms ease;
+            transition-property: all;
+        }
+        .box:hover {
+            width: 150px;
+            height: 150px;
+            background-color:white;
+            color: black;
+            transform: rotate(360deg);
+        }
+    </style>
+</head>
+<body>
+    <div id="margin1">
+        <h1>⭐️Transform⭐️</h1>
+        <div class="time1s">
+            <p>transform: rotateX(180deg)</p>
+            <div id="rotate_x_180">
+                <img src="images/hachiware.png" width="30%">
+            </div>
+        </div>
+        <hr>
+        <div class="time1s">
+            <p>transform: rotateY(180deg)</p>
+            <div id="rotate_y_180">
+                <img src="images/hachiware.png" width="30%">
+            </div>
+        </div>
+        <hr>
+        <div class="time1s">
+            <p>transform: rotateZ(180deg)</p>
+            <div id="rotate_z_180">
+                <img src="images/hachiware.png" width="30%">
+            </div>
+        </div>
+        <hr>
+        <div class="time1s">
+            <p>transform: rotate3d(1, -1, 1 360deg)</p>
+            <div id="rotate_xyz">
+                <img src="images/hachiware.png" width="30%">
+            </div>
+        </div>
+        <hr>
+        <div class="time1s">
+            <p>transform: skew</p>
+            <div id="skew_x">
+                <img src="images/hachiware.png" width="30%">
+            </div>
+            <h3>Transform는 텍스트 영역에도 적용할 수 있다!</h3>
+        </div>
+        <hr>
+        <h1>⭐️Transition⭐️</h1>
+        <div class="box">빙 글 빙 글</div>
+        <hr>
+    </div>
+</body>
+</html>
