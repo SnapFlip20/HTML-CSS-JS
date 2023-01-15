@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        ul {
+            list-style: none;
+            width: 700px;
+            margin: 20px auto;
+            padding: 0;
+        }
+        li {
+            display: inline-block;
+            width: 120px;
+            border: 5px solid #000;
+            border-radius: 10px;
+            padding: 20px;	
+            font-size: 20px;
+            text-align: center;
+        }
+        p {
+            width: 620px;
+            margin: auto;
+            border: 5px solid #000;
+            border-radius: 10px;
+            padding: 40px;
+            font-size: 55px;
+            text-align: center;
+        }
+        .c1 {background-color: rgb(255, 115, 115);}
+        .c2 {background-color: rgb(115, 230, 115);}
+        .c3 {background-color: rgb(56, 165, 255);}
+        .c4 {background-color: rgb(254, 170, 61);}
+
+        @keyframes blinking {50%{opacity: 0;}} 
+        .blink { 
+            animation: blinking 200ms step-end infinite; 
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li class="c1"><a href="hint: click" onclick="alert('HTML 요소를 클릭할 때 이벤트 발생');"">⭐️</a></li>
+        <li class="c2"><a href="hint: double click" ondblclick="alert('HTML 요소를 더블 클릭할 때 이벤트 발생')">⭐️</a></li>
+        <li class="c3"><a href="hint: move" onmouseover="alert('마우스 포인터가 요소 위로 이동했을 때 이벤트 발생')">⭐️</a></li>
+        <li class="c4"><a href="hint: click" onclick="f()">⭐️</a></li>
+    </ul>
+    <p><span class="blink">스페이스 바를 눌러봐!!!</span></p>
+
+    <script>
+        function f() {
+            alert('HTML 요소를 클릭할 때 JS 함수 실행');
+        }
+
+        document.addEventListener("keydown", check, false);
+        function check(e) {
+            if (e.keyCode === 32) {
+                alert('쨘!!!');
+            }
+        }
+    </script>
+</body>
+</html>
